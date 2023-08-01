@@ -1,0 +1,11 @@
+<IfModule mod_rewrite.c>
+
+RewriteCond %{HTTPS} off
+RewriteRule (.*) https://ergogym.com.ar/$1 [R=301,L,QSA]
+
+RewriteEngine on
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME}.php -f
+RewriteRule ^(.*)$ $1.php
+
+</IfModule>

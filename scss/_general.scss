@@ -1,0 +1,72 @@
+html,
+body {
+  accent-color: white;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  @media (max-width: 980px) {
+    font-size: 90%;
+  }
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  main {
+    flex: 1;
+  }
+}
+
+a {
+  color: currentColor;
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+svg {
+  fill: currentColor;
+  polyline {
+    stroke: currentColor;
+  }
+  line {
+    stroke: currentColor;
+  }
+}
+
+.text-wrap-balance {
+  text-wrap: balance;
+}
+
+.fade-in {
+  animation: fadeIn ease 0.3s;
+}
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.fade-in-2 {
+  animation: fadeIn2 ease 3s;
+}
+@keyframes fadeIn2 {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+input::placeholder,
+textarea::placeholder {
+  color: black;
+}
+
+button {
+  font-size: inherit;
+}

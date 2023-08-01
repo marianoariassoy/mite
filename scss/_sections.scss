@@ -1,0 +1,72 @@
+.hover-underline-animation {
+  display: inline-block;
+  position: relative;
+  color: #000;
+  &:hover {
+    text-decoration: none;
+  }
+}
+
+.hover-underline-animation:after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #000;
+  transform-origin: bottom left;
+  transition: transform 0.1s ease-out;
+}
+
+.hover-underline-animation:hover:after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
+.hover-border-2:after {
+  height: 5px;
+  bottom: -6px;
+  left: 2px;
+}
+
+.active {
+  border-bottom: 2px solid #000;
+  &:hover {
+    text-decoration: none;
+  }
+}
+
+.text-2xl {
+  @media (max-width: 980px) {
+    font-size: 1.5rem;
+  }
+}
+.text-3xl {
+  font-size: 1.75rem;
+  line-height: 1.25;
+  @media (max-width: 980px) {
+    font-size: 1.5rem;
+  }
+}
+.text-5xl {
+  @media (max-width: 980px) {
+    font-size: 1.5rem;
+  }
+}
+
+.gradient-1 {
+  background: linear-gradient(to right, #ccffff, #99ccff);
+}
+.gradient-2 {
+  background: linear-gradient(to right, #fb2c84, #3e3bfc);
+}
+.gradient-3 {
+  background: linear-gradient(to right, #99ccff, #f9a9ab);
+}
+
+.lan {
+  writing-mode: sideways-lr;
+  font-size: 0.75rem;
+}

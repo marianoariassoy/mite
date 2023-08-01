@@ -1,0 +1,35 @@
+.nav-menu {
+  cursor: pointer;
+  width: 30px;
+  display: none;
+  @media (max-width: 980px) {
+    display: block;
+  }
+}
+.nav-menu > span {
+  background-color: currentColor;
+  display: block;
+  height: 1px;
+  width: 30px;
+}
+.nav-menu > span:not(:last-child) {
+  margin-bottom: 8px;
+}
+.nav-menu,
+.nav-menu > span {
+  transition: all 0.25s ease;
+}
+.nav-menu.active {
+  border: 0;
+  transform: rotate(45deg);
+}
+.nav-menu.active > span:nth-child(2) {
+  width: 0;
+  transition: none;
+}
+.nav-menu.active > span:nth-child(1) {
+  transform: translateY(9px);
+}
+.nav-menu.active > span:nth-child(3) {
+  transform: translateY(-9px) rotate(90deg);
+}
